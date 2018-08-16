@@ -14,5 +14,10 @@ This is start python script and train MNIST deep model with 1000 iterations. Aft
 - Start TensorFlow Serving with the following command: 
 
 ```sh
-tensorflow_model_server --port=9000 --model_name=mnist --model_base_path="odel Training Folder Path"
+tensorflow_model_server --port=9000 --model_name=mnist --model_base_path="D:\dev\TensorFlowServingCSharpClient\learning\tmp"
 ```
+
+
+
+docker run -p 8500:8500 -v D:/dev/TensorFlowServingCSharpClient/learning/tmp:/models/mnist -e MODEL_NAME=mnist -t tensorflow/serving tensorflow_model_server --port=8500 --model_name=mnist --model_base_path=/models/mnist
+
